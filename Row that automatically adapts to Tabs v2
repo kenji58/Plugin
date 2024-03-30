@@ -1,0 +1,15 @@
+import { RedesignRow } from "@nexpid/vdp-shared";
+
+export function SomeComponent({ isCool }: { isCool: boolean }) {
+  return (
+    <RedesignRow
+      label={"Do Something Awesome"}
+      icon={getAssetIDByName("ic_cog_24px")}
+      onPress={() => {
+        if (!isCool)
+          showToast("You're not cool enough!", getAssetIDByName("Small"));
+        else showToast("Awesome thing");
+      }}
+    />
+  );
+}
